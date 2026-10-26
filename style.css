@@ -249,7 +249,14 @@ body.dark-theme {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    
+    display: none !important; 
 }
+
+.custom-modal[style*="flex"] {
+    display: flex !important;
+}
+
 
 .modal-card {
     background: #111827;
