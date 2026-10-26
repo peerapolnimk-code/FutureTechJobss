@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutureTechJobs - Next-Gen AI & Tech Careers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <header class="main-header">
+        <div class="header-container">
+            <div class="brand-logo">
+                <i class="fa-solid fa-bolt-lightning text-neon"></i>
+                <span>FutureTech<span class="text-gradient">Jobs</span></span>
+            </div>
+            <nav class="navigation">
+                <a href="#" id="link-home" class="nav-btn active" onclick="navigate('home')"><i class="fa-solid fa-house-laptop"></i> Home</a>
+                <a href="#" id="link-services" class="nav-btn" onclick="navigate('services')"><i class="fa-solid fa-graduation-cap"></i> Services & Certify</a>
+                <a href="#" id="link-about" class="nav-btn" onclick="navigate('about')"><i class="fa-solid fa-shield-halved"></i> About TOR</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="page-home" class="view-page active">
+        <section class="futuristic-hero">
+            <h1>ขับเคลื่อนอาชีพคุณเข้าสู่ยุค <br><span class="text-gradient">Artificial Intelligence</span></h1>
+            <p>ศูนย์รวมตำแหน่งงานสายปัญญาประดิษฐ์ ดิจิทัล และหลักสูตรสอบใบรับรองสากลระดับสูง</p>
+        </section>
+        <section class="why-us-futuristic">
+            <div class="section-tag">WHY WORK WITH US</div>
+            <h2>ทำไมต้องร่วมงานสาย AI กับเรา?</h2>
+            <div class="glow-cards-grid">
+                <div class="glow-card">
+                    <div class="card-icon cyan"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>นวัตกรรม AI ระดับแถวหน้า</h3>
+                    <p>ร่วมพัฒนาและประยุกต์ใช้โมเดล Generative AI, LLMs และระบบอัตโนมัติร่วมกับองค์กรเทคโนโลยีชั้นนำ</p>
+                    <div class="card-stat">+150 Projects</div>
+                </div>
+                <div class="glow-card feature">
+                    <div class="card-icon purple"><i class="fa-solid fa-rocket"></i></div>
+                    <h3>เติบโตก้าวกระโดด 300%</h3>
+                    <p>เราสนับสนุนงบสอบใบรับรองสากล (Certifications) และสวัสดิการส่งเสริมการพัฒนาทักษะรายบุคคล</p>
+                    <div class="card-stat">Fast-Track Career</div>
+                </div>
+                <div class="glow-card">
+                    <div class="card-icon green"><i class="fa-solid fa-globe"></i></div>
+                    <h3>สไตล์การทำงานยุคใหม่</h3>
+                    <p>ให้อิสระในการทำงานด้วยรูปแบบ Remote 100% หรือ Hybrid พร้อมอุปกรณ์และเครื่องมือซอฟต์แวร์ลิขสิทธิ์แท้</p>
+                    <div class="card-stat">Work Anywhere</div>
+                </div>
+            </div>
+        </section>
+        <section class="jobs-display">
+            <div class="jobs-header">
+                <h2><i class="fa-solid fa-fire text-neon"></i> ตำแหน่งงาน AI ล่าสุดในประเทศไทย</h2>
+            </div>
+            <div class="job-cards-container">
+                <div class="modern-job-card">
+                    <div class="job-meta">
+                        <span class="job-badge purple">AI & ML</span>
+                        <h3>1. AI & Machine Learning Engineer</h3>
+                        <p style="color: #38bdf8; font-size: 0.9rem; margin-top: 0.2rem;">🏢 KBTG (Kasikorn Business-Technology Group)</p>
+                        <p class="salary-tag"><i class="fa-solid fa-coins"></i> 65,000 - 110,000 บาท/เดือน</p>
+                        <p class="job-desc">พัฒนาและ Deploy โมเดล Machine Learning เข้าสู่ระบบแบงก์กิ้งระดับประเทศ</p>
+                    </div>
+                    <button class="btn-action" onclick="openJobDetail(1)">ดูรายละเอียด <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="modern-job-card">
+                    <div class="job-meta">
+                        <span class="job-badge cyan">Data Science</span>
+                        <h3>2. Senior Data Scientist</h3>
+                        <p style="color: #38bdf8; font-size: 0.9rem; margin-top: 0.2rem;">🏢 True Digital Group Co., Ltd.</p>
+                        <p class="salary-tag"><i class="fa-solid fa-coins"></i> 70,000 - 120,000 บาท/เดือน</p>
+                        <p class="job-desc">วิเคราะห์ Big Data สร้าง Predictive Analytics Models สนับสนุนธุรกิจดิจิทัล</p>
+                    </div>
+                    <button class="btn-action" onclick="openJobDetail(2)">ดูรายละเอียด <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="modern-job-card">
+                    <div class="job-meta">
+                        <span class="job-badge green">Generative AI</span>
+                        <h3>3. Prompt Engineer & LLM Specialist</h3>
+                        <p style="color: #38bdf8; font-size: 0.9rem; margin-top: 0.2rem;">🏢 SCB 10X</p>
+                        <p class="salary-tag"><i class="fa-solid fa-coins"></i> 60,000 - 100,000 บาท/เดือน</p>
+                        <p class="job-desc">ออกแบบ Prompt สถาปัตยกรรม RAG และ Fine-Tuning LLMs สำหรับฟินเทค</p>
+                    </div>
+                    <button class="btn-action" onclick="openJobDetail(3)">ดูรายละเอียด <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="modern-job-card">
+                    <div class="job-meta">
+                        <span class="job-badge amber">Development</span>
+                        <h3>4. Full-Stack AI Developer</h3>
+                        <p style="color: #38bdf8; font-size: 0.9rem; margin-top: 0.2rem;">🏢 LINE Man Wongnai</p>
+                        <p class="salary-tag"><i class="fa-solid fa-coins"></i> 55,000 - 95,000 บาท/เดือน</p>
+                        <p class="job-desc">พัฒนาระบบเว็บแอปพลิเคชันเชื่อมต่อ AI API รองรับผู้ใช้งานหลักล้านคน</p>
+                    </div>
+                    <button class="btn-action" onclick="openJobDetail(4)">ดูรายละเอียด <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="modern-job-card">
+                    <div class="job-meta">
+                        <span class="job-badge red">Cloud Tech</span>
+                        <h3>5. Cloud & AI Infrastructure Engineer</h3>
+                        <p style="color: #38bdf8; font-size: 0.9rem; margin-top: 0.2rem;">🏢 AIS (Advanced Info Service)</p>
+                        <p class="salary-tag"><i class="fa-solid fa-coins"></i> 65,000 - 110,000 บาท/เดือน</p>
+                        <p class="job-desc">บริหารจัดการโครงสร้างพื้นฐานบน Cloud และ GPU Cluster รองรับงาน AI</p>
+                    </div>
+                    <button class="btn-action" onclick="openJobDetail(5)">ดูรายละเอียด <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main id="page-services" class="view-page" style="display: none;">
+        <section class="futuristic-hero">
+            <h1>Training & <span class="text-gradient">Certifications</span></h1>
+            <p>หลักสูตรอบรมเชิงปฏิบัติการ และศูนย์จัดสอบรับรองมาตรฐานสากลด้าน AI & Digital</p>
+        </section>
+        <section class="jobs-display">
+            <div class="jobs-header">
+                <h2><i class="fa-solid fa-graduation-cap text-neon"></i> หลักสูตรอบรม & สอบ Certify ทั้งหมด (8 หลักสูตร)</h2>
+            </div>
+            <div class="job-cards-container">
+                <div class="modern-job-card">
+                    <div class="job-meta">
+                        <span class="job-badge purple">Certify</span>
+                        <h3>1. Certified Generative AI & LLM Engineer Masterclass</h3>
+                        <p style="color: #10b981; font-weight: 600; margin-top: 0.2rem;">💵 ค่าลงทะเบียน: 12,500 บาท (30 ชั่วโมง)</p>
+                        <p class="job-desc">เรียนรู้สถาปัตยกรรม Transformer, RAG และ Fine-tuning Llama3 พร้อมรับใบ Certify สากล</p>
+                    </div>
+                    <button class="btn-action" onclick="openApplyFormForCourse('Certified Generative AI & LLM Engineer Masterclass')">ลงทะเบียนอบรม <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="modern-job-card">
+                    <div class="job-meta">
+                        <span class="job-badge cyan">Certify</span>
+                        <h3>2. Professional Data Science & Big Data Analytics</h3>
+                        <p style="color: #10b981; font-weight: 600; margin-top: 0.2rem;">💵 ค่าลงทะเบียน: 9,900 บาท (24 ชั่วโมง)</p>
+                        <p class="job-desc">เจาะลึก Big Data Tools, Predictive Analytics และ Data Visualization ระดับมืออาชีพ</p>
+                    </div>
+                    <button class="btn-action" onclick="openApplyFormForCourse('Professional Data Science & Big Data Analytics')">ลงทะเบียนอบรม <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="modern-job-card">
+                    <div class="job-meta">
+                        <span class="job-badge green">Certify</span>
+                        <h3>3. Advanced Prompt Engineering for Enterprise AI</h3>
+                        <p style="color: #10b981; font-weight: 600; margin-top: 0.2rem;">💵 ค่าลงทะเบียน: 5,900 บาท (12 ชั่วโมง)</p>
+                        <p class="job-desc">เทคนิคการเขียน Prompt ขั้นสูง, Chain-of-Thought และการสร้าง AI Agent ในองค์กร</p>
+                    </div>
+                    <button class="btn-action" onclick="openApplyFormForCourse('Advanced Prompt Engineering for Enterprise AI')">ลงทะเบียนอบรม <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="modern-job-card">
+                    <div class="job-meta">
+                        <span class="job-badge amber">Certify</span>
+                        <h3>4. Full-Stack AI Application Developer Bootcamp</h3>
+                        <p style="color: #10b981; font-weight: 600; margin-top: 0.2rem;">💵 ค่าลงทะเบียน: 15,000 บาท (40 ชั่วโมง)</p>
+                        <p class="job-desc">พัฒนาเว็บแอปยุคใหม่เชื่อมต่อ LLM APIs ด้วย Next.js และ Python FastAPI</p>
+                    </div>
+                    <button class="btn-action" onclick="openApplyFormForCourse('Full-Stack AI Application Developer Bootcamp')">ลงทะเบียนอบรม <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main id="page-about" class="view-page" style="display: none;">
+        <section class="futuristic-hero">
+            <h1>About <span class="text-gradient">FutureTechJobs</span></h1>
+            <p>ศูนย์กลางนวัตกรรมและการขับเคลื่อนบุคลากรด้าน AI & Tech สู่ระดับสากล</p>
+        </section>
+
+        <div class="about-container">
+            <div class="glow-cards-grid" style="margin-bottom: 2rem;">
+                <div class="glow-card">
+                    <div class="card-icon cyan"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <h3>ประวัติความเป็นมา</h3>
+                    <p>FutureTechJobs ก่อตั้งขึ้นเพื่อเป็นสะพานเชื่อมระหว่างองค์กรเทคโนโลยีชั้นนำในประเทศไทย กับบุคลากรสายงานปัญญาประดิษฐ์ (AI), Data Science และ Cloud Computing มุ่งเน้นการยกระดับทักษะแรงงานไทยให้เท่าทันกับเทคโนโลยียุคใหม่</p>
+                </div>
+                <div class="glow-card feature">
+                    <div class="card-icon purple"><i class="fa-solid fa-eye"></i></div>
+                    <h3>วิสัยทัศน์ของเรา (Our Vision)</h3>
+                    <p>มุ่งสู่การเป็นแพลตฟอร์มสรรหาและพัฒนาบุคลากรสายงาน AI อันดับ 1 ในภูมิภาคอาเซียน เพื่อขับเคลื่อนเศรษฐกิจดิจิทัล สร้างโอกาสทางอาชีพที่ไร้ขีดจำกัด และผลักดันมาตรฐานใบรับรองสากลระดับสูง</p>
+                </div>
+            </div>
+            <div class="glow-cards-grid" style="margin-bottom: 2rem;">
+                <div class="glow-card">
+                    <div class="card-icon cyan"><i class="fa-solid fa-user-astronaut"></i></div>
+                    <h3>ทีมงานผู้พัฒนา (Development Team)</h3>
+                    <div style="margin-top: 1rem;">
+                        <p style="font-size: 1.1rem; font-weight: 600; color: #fff;">Peerapol Nimkheaw</p>
+                        <p style="color: var(--neon-cyan); font-size: 0.9rem;">Lead Developer & Platform Architect</p>
+                    </div>
+                </div>
+                <div class="glow-card">
+                    <div class="card-icon green"><i class="fa-solid fa-location-dot"></i></div>
+                    <h3>ข้อมูลการติดต่อ (Contact Us)</h3>
+                    <div style="font-size: 0.9rem; color: var(--text-dim); margin-top: 0.8rem; display: flex; flex-direction: column; gap: 0.6rem;">
+                        <p><i class="fa-solid fa-building text-neon" style="width: 20px;"></i> <strong>ที่อยู่:</strong> 9/144 ตำบลคลองหนึ่ง อำเภอคลองหลวง จังหวัดปทุมธานี 12120</p>
+                        <p><i class="fa-solid fa-envelope text-neon" style="width: 20px;"></i> <strong>อีเมล:</strong> <a href="mailto:Peerapol.nimk@bumail.net" style="color: var(--neon-cyan); text-decoration: none;">Peerapol.nimk@bumail.net</a></p>
+                        <p><i class="fa-solid fa-phone text-neon" style="width: 20px;"></i> <strong>เบอร์โทรศัพท์:</strong> <a href="tel:0821604048" style="color: var(--neon-cyan); text-decoration: none;">082-160-4048</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
