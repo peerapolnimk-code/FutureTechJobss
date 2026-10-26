@@ -18,79 +18,50 @@ const courseOptions = [
 ];
 
 const jobDetailsData = {
-    1: {
-        title: "AI & Machine Learning Engineer",
-        company: "Kasikorn Business-Technology Group (KBTG) • กรุงเทพฯ",
-        salary: "65,000 - 110,000 บาท/เดือน",
-        experience: "ประสบการณ์ 2+ ปี ด้าน Machine Learning หรือ AI Development",
-        openDate: "15-Oct-26",
-        benefits: [
-            "โบนัสประจำปีตามผลงาน และกองทุนสำรองเลี้ยงชีพ (PVD)",
-            "ประกันสุขภาพกลุ่ม (IPD/OPD) คุ้มครองครอบครัว และตรวจสุขภาพประจำปี",
-            "งบสนับสนุนการเรียนรู้คอร์สออนไลน์และสอบ Certify (AWS, Google Cloud)",
-            "รูปแบบการทำงาน Hybrid (เข้าออฟฟิศสัปดาห์ละ 2 วัน)"
-        ],
-        responsibilities: [
-            "พัฒนา ปรับปรุง และ Deploy โมเดล Machine Learning/Deep Learning เข้าสู่ระบบการทำงานจริงของธนาคาร",
-            "ออกแบบสถาปัตยกรรม MLOps และสร้าง Data Pipeline สำหรับการประมวลผลข้อมูลขนาดใหญ่",
-            "ทดสอบประสิทธิภาพของโมเดล และปรับแต่ง Parameter ให้มีความแม่นยำสูง",
-            "ทำงานร่วมกับ Data Scientist และ Software Engineer เพื่อส่งมอบฟีเจอร์ AI ใหม่ๆ"
-        ]
-    }
+    1: { title: "AI & Machine Learning Engineer", company: "KBTG", salary: "65,000 - 110,000 บาท/เดือน" },
+    2: { title: "Senior Data Scientist", company: "True Digital Group", salary: "70,000 - 120,000 บาท/เดือน" },
+    3: { title: "Prompt Engineer & LLM Specialist", company: "SCB 10X", salary: "60,000 - 100,000 บาท/เดือน" },
+    4: { title: "Full-Stack AI Developer", company: "LINE Man Wongnai", salary: "55,000 - 95,000 บาท/เดือน" },
+    5: { title: "Cloud & AI Infrastructure Engineer", company: "AIS", salary: "65,000 - 110,000 บาท/เดือน" }
 };
 
 function navigate(pageId) {
     const pages = document.querySelectorAll('.view-page');
-    pages.forEach(page => {
-        page.classList.remove('active');
-    });
+    pages.forEach(page => page.classList.remove('active'));
 
     const navButtons = document.querySelectorAll('.nav-btn');
-    navButtons.forEach(btn => {
-        btn.classList.remove('active');
-    });
+    navButtons.forEach(btn => btn.classList.remove('active'));
 
     const targetPage = document.getElementById('page-' + pageId);
-    if (targetPage) {
-        targetPage.classList.add('active');
-    }
+    if (targetPage) targetPage.classList.add('active');
 
     const targetBtn = document.getElementById('link-' + pageId);
-    if (targetBtn) {
-        targetBtn.classList.add('active');
-    }
+    if (targetBtn) targetBtn.classList.add('active');
 }
 
 function openJobDetail(jobId) {
     const modal = document.getElementById('modalDetail');
     const content = document.getElementById('detailContent');
-    const job = jobDetailsData[jobId];
+    const job = jobDetailsData[jobId] || { title: "ตำแหน่งงานที่ " + jobId, company: "FutureTechJobs Partner", salary: "ตามโครงสร้างบริษัท" };
 
-    if (job && content) {
+    if (content) {
         content.innerHTML = `
             <h2 style="color: var(--neon-cyan); margin-bottom: 0.5rem;">${job.title}</h2>
-            <p style="color: var(--text-dim); margin-bottom: 1rem;">${job.company}</p>
-            <p><strong>เงินเดือน:</strong> ${job.salary}</p>
-            <p><strong>ประสบการณ์:</strong> ${job.experience}</p>
-            <h3 style="margin-top: 1rem; color: #fff;">สวัสดิการ:</h3>
-            <ul>${job.benefits.map(b => `<li>${b}</li>`).join('')}</ul>
-            <h3 style="margin-top: 1rem; color: #fff;">หน้าที่ความรับผิดชอบ:</h3>
-            <ul>${job.responsibilities.map(r => `<li>${r}</li>`).join('')}</ul>
+            <p style="color: var(--text-dim); margin-bottom: 1rem;">🏢 ${job.company}</p>
+            <p><strong><i class="fa-solid fa-coins"></i> ค่าตอบแทน:</strong> ${job.salary}</p>
+            <p style="margin-top: 1rem;"><strong>รายละเอียดเบื้องต้น:</strong> มุ่งเน้นการพัฒนาและประยุกต์ใช้เทคโนโลยี AI ระดับองค์กร พร้อมสวัสดิการและโอกาสเติบโตก้าวกระโดด</p>
+            <div style="margin-top: 1.5rem; text-align: right;">
+                <button class="btn-action" onclick="closeJobDetail(); openApplyFormForCourse('${job.title}')">สมัครตำแหน่งนี้ <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
         `;
-    } else if (content) {
-        content.innerHTML = `<h2>รายละเอียดตำแหน่งงานที่ ${jobId}</h2><p>กำลังปรับปรุงข้อมูลเพิ่มเติม</p>`;
     }
 
-    if (modal) {
-        modal.style.display = 'flex';
-    }
+    if (modal) modal.style.display = 'flex';
 }
 
 function closeJobDetail() {
     const modal = document.getElementById('modalDetail');
-    if (modal) {
-        modal.style.display = 'none';
-    }
+    if (modal) modal.style.display = 'none';
 }
 
 function openApplyFormForCourse(courseName) {
@@ -99,23 +70,20 @@ function openApplyFormForCourse(courseName) {
     const selectEl = document.getElementById('targetSelect');
 
     if (formTitle) {
-        formTitle.innerText = "ลงทะเบียนอบรม: " + courseName;
+        formTitle.innerText = "ลงทะเบียน / สมัคร: " + courseName;
     }
 
     if (selectEl) {
-        selectEl.innerHTML = courseOptions.map(opt => `<option value="${opt.value}" ${opt.value === courseName ? 'selected' : ''}>${opt.label}</option>`).join('');
+        const allOptions = [...jobOptions, ...courseOptions];
+        selectEl.innerHTML = allOptions.map(opt => `<option value="${opt.value}" ${opt.value === courseName ? 'selected' : ''}>${opt.label}</option>`).join('');
     }
 
-    if (modal) {
-        modal.style.display = 'flex';
-    }
+    if (modal) modal.style.display = 'flex';
 }
 
 function closeApplyForm() {
     const modal = document.getElementById('modalApply');
-    if (modal) {
-        modal.style.display = 'none';
-    }
+    if (modal) modal.style.display = 'none';
 }
 
 function processSubmit(event) {
@@ -150,15 +118,11 @@ function processSubmit(event) {
         return;
     }
 
-    if (alertBox) {
-        alertBox.style.display = "none";
-    }
+    if (alertBox) alertBox.style.display = "none";
 
-    alert("✨ ดำเนินการสำเร็จ!\nระบบบันทึกข้อมูลของคุณเรียบร้อยแล้ว");
+    alert("✨ ดำเนินการสำเร็จ!\nระบบบันทึกข้อมูลการสมัครเรียบร้อยแล้ว");
     closeApplyForm();
     
     const jobForm = document.getElementById('jobForm');
-    if (jobForm) {
-        jobForm.reset();
-    }
+    if (jobForm) jobForm.reset();
 }
